@@ -18,7 +18,7 @@ try{
   );
   // This isn't a real internet request, so the host is irrelevant (https://developers.cloudflare.com/workers/platform/compatibility-dates#durable-object-stubfetch-requires-a-full-url).
   const doResponse = await dObj.fetch(
-    "https://do.draw.io/"
+    "https://do.draw.io/increment"
   );
   const val = await doResponse.json();
 
