@@ -1,0 +1,13 @@
+{
+  "name": "@pages-test/durable_objects",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "module": "./src/durableObj.mjs",
+  "scripts": {
+    "publish": "npx wrangler publish"
+  },
+  "devDependencies": {
+    "@cloudflare/wrangler": "^1.19.5"
+  }
+}

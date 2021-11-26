@@ -1,0 +1,19 @@
+name = "pages-test-durable-obj"
+type = "javascript"
+workers_dev = true
+compatibility_date = "2021-11-17"
+account_id = "b6f268167b445abeef954325cd0290cb"
+
+[build.upload]
+dir = "src"
+format = "modules"
+main = "./durableObj.mjs"
+
+[durable_objects]
+bindings = [
+  { name = "DURABLE_OBJ", class_name = "DurableObj" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["DurableObj"]

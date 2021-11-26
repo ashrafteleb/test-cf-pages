@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "postinstall": "cd durable_objects && npm install",
+    "start": "npx wrangler pages dev ./public/  --kv KV_STORE"
+  },
+  "dependencies": {
+    "wrangler": "^0.0.0-fsw-beta.5"
+  }
+}
