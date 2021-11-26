@@ -1,4 +1,5 @@
 export async function onRequest(context) {
+try{
   // Contents of context object
   const {
     request, // same as existing Worker API
@@ -22,4 +23,7 @@ export async function onRequest(context) {
   const val = await doResponse.json();
 
   return new Response("value from DO: " + JSON.stringify(val));
+}catch(e){
+  return new Response("error: " + e);
+}
 }

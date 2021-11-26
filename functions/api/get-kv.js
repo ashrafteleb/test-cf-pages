@@ -1,4 +1,5 @@
 export async function onRequest(context) {
+  try{
   // Contents of context object
   const {
     request, // same as existing Worker API
@@ -14,4 +15,7 @@ export async function onRequest(context) {
 
   let val = await env.KV_STORE.get(params.get('key'));
   return new Response("value from KV: " + val);
+}catch(e){
+  return new Response("error: " + e);
+}
 }
